@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type{ CSSProperties } from "react";
 
 function App() {
   const [number, setNumber] = useState("");
@@ -41,7 +42,14 @@ function App() {
   );
 }
 
-const styles = {
+/* ✅ Typed inline styles */
+const styles: {
+  container: CSSProperties;
+  input: CSSProperties;
+  buttonGroup: CSSProperties;
+  button: CSSProperties;
+  result: CSSProperties;
+} = {
   container: {
     minHeight: "100vh",
     display: "flex",
@@ -54,18 +62,25 @@ const styles = {
   input: {
     padding: "10px",
     fontSize: "16px",
-    width: "220px",
     marginBottom: "15px",
+    width: "220px",
+  },
+  buttonGroup: {
+    display: "flex",
+    gap: "10px",
+    flexWrap: "wrap",
+    justifyContent: "center",
   },
   button: {
-    padding: "10px 20px",
-    fontSize: "16px",
+    padding: "10px 15px",
+    fontSize: "14px",
     cursor: "pointer",
   },
   result: {
     marginTop: "20px",
     fontSize: "18px",
+    textAlign: "center",
+    maxWidth: "500px",
   },
 };
-
 export default App;
