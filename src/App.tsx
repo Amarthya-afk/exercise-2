@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type{ CSSProperties } from "react";
 
 
 function App() {
@@ -43,7 +44,7 @@ function App() {
   );
 }
 
-const styles = {
+const styles: Record<string, CSSProperties> = {
   container: {
     minHeight: "100vh",
     display: "flex",
@@ -56,18 +57,21 @@ const styles = {
   input: {
     padding: "10px",
     fontSize: "16px",
-    width: "220px",
     marginBottom: "15px",
+    width: "220px",
   },
   button: {
-    padding: "10px 20px",
-    fontSize: "16px",
+    padding: "10px 15px",
+    fontSize: "14px",
     cursor: "pointer",
   },
   result: {
     marginTop: "20px",
     fontSize: "18px",
+    textAlign: "center",
+    maxWidth: "500px",
   },
 };
+
 
 export default App;
