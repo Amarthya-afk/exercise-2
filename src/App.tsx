@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type{ CSSProperties } from "react";
+
 
 function App() {
   const [number, setNumber] = useState("");
@@ -16,7 +16,6 @@ function App() {
 
     setSum(digitSum);
   };
-}
 
 
   return (
@@ -44,14 +43,7 @@ function App() {
   );
 }
 
-/* ✅ Typed inline styles */
-const styles: {
-  container: CSSProperties;
-  input: CSSProperties;
-  buttonGroup: CSSProperties;
-  button: CSSProperties;
-  result: CSSProperties;
-} = {
+const styles = {
   container: {
     minHeight: "100vh",
     display: "flex",
@@ -64,25 +56,18 @@ const styles: {
   input: {
     padding: "10px",
     fontSize: "16px",
-    marginBottom: "15px",
     width: "220px",
-  },
-  buttonGroup: {
-    display: "flex",
-    gap: "10px",
-    flexWrap: "wrap",
-    justifyContent: "center",
+    marginBottom: "15px",
   },
   button: {
-    padding: "10px 15px",
-    fontSize: "14px",
+    padding: "10px 20px",
+    fontSize: "16px",
     cursor: "pointer",
   },
   result: {
     marginTop: "20px",
     fontSize: "18px",
-    textAlign: "center",
-    maxWidth: "500px",
   },
 };
+
 export default App;
