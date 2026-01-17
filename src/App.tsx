@@ -3,7 +3,7 @@ import type{ CSSProperties } from "react";
 
 function App() {
   const [number, setNumber] = useState("");
-  const [sum, setSum] = useState(null);
+  const [sum, setSum] = useState<number | string | null>(null);
 
   const calculateSumOfDigits = () => {
     if (number === "") {
@@ -16,6 +16,8 @@ function App() {
 
     setSum(digitSum);
   };
+}
+
 
   return (
     <div style={styles.container}>
